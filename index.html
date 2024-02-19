@@ -70,7 +70,7 @@
       </div>
       <!-- AD SERVER -->
       <div class="wrapper1">
-        <img class="adSpace" src="" alt="">
+        <img class="adSpace" width="100%" src="" alt="">
       </div>
     </header>
 
@@ -163,10 +163,10 @@
               redirect: 'follow'
           };
 
-          fetch("https://ad.simaneka.com/api/get?type=Vertical Strip", requestOptions)
+          fetch("https://ad.simaneka.com/api/get?type=hORIZONTAL Strip", requestOptions)
               .then(response => response.text())
               .then(result => 
-                  
+                      
                       // console.log(JSON.parse(result).link))
                       document.querySelector('.adSpace').src = JSON.parse(result).link
               )

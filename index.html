@@ -151,7 +151,7 @@
       <div class="footer__bar">
         Copyright © 2023 Web Design Mastery. All rights reserved.
       </div>
-    </footer>
+    </footer>9
     <script>
       var myHeaders = new Headers();
           myHeaders.append("authorisation", "XUwCeuxr6ZjELa4cA9dhYSDV7fpsRMGz");
@@ -168,6 +168,7 @@
               .then(result => 
                       
                       // console.log(JSON.parse(result).link))
+                      document.querySelector('.adSpace').src = JSON.parse(result).link,
                       document.querySelector('.adSpace').src = JSON.parse(result).link
               )
               .catch(error => console.log('error', error));

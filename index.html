@@ -50,6 +50,14 @@
           </div>
         </div>
       </div>
+      <!-- AD SERVER -->
+      <div class="wrapper1">
+        <img class="adSpace" src="" alt="">
+      </div>
+      <div class="wrapper2">
+      
+        <img class="adSpace2" src="" alt="">
+      </div>
     </header>
 
     <section class="section__container destination__container">
@@ -220,5 +228,26 @@
         Copyright © 2023 Web Design Mastery. All rights reserved.
       </div>
     </footer>
+    <script>
+      var myHeaders = new Headers();
+          myHeaders.append("authorisation", "XUwCeuxr6ZjELa4cA9dhYSDV7fpsRMGz");
+          myHeaders.append("Cookie", "ci_session=ff2aa0663b882aa133094fe64ad6296ed8cb1c47");
+
+          var requestOptions = {
+              method: 'POST',
+              headers: myHeaders,
+              redirect: 'follow'
+          };
+
+          fetch("https://ad.simaneka.com/api/get?type=Vertical Strip", requestOptions)
+              .then(response => response.text())
+              .then(result => 
+                  
+                      // console.log(JSON.parse(result).link))
+                      document.querySelector('.adSpace').src = JSON.parse(result).link
+              )
+              .catch(error => console.log('error', error));
+
+  </script>
   </body>
 </html>

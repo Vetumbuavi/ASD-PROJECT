@@ -480,6 +480,20 @@ header {
   border-top: 1px solid var(--text-light);
 }
 
+.wrapper1
+        {
+            height: 100px;
+            width: 400px;
+            background-color: blue;
+        }
+        .wrapper2
+        {
+            height: 400px;
+            width: 400px;
+            background-color: blue;
+            margin-top: 20px;
+        }
+
 @media (width < 1200px) {
   .header__image img:nth-child(1) {
     max-width: 300px;

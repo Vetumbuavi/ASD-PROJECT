@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Web Design Mastery | Pathway</title>
     <style>
-      .wrapper1
+      .redirect
       {
           height: 100px;
           width: 100%;
@@ -69,9 +69,12 @@
         </div>
       </div>
       <!-- AD SERVER -->
-      <div class="wrapper1">
+      <div class="redirect">
         <img class="adSpace" width="100%" src="" alt="">
       </div>
+      <a class="redirect" href="https://google.com">
+        <img class="advertisment" src="https://i.pinimg.com/originals/fd/2e/16/fd2e16de809e4727308251edf81a2831.png">
+    </a>
     </header>
 
     <section class="section__container destination__container">
@@ -154,24 +157,43 @@
     </footer>9
     <script>
       var myHeaders = new Headers();
-          myHeaders.append("authorisation", "XUwCeuxr6ZjELa4cA9dhYSDV7fpsRMGz");
-          myHeaders.append("Cookie", "ci_session=ff2aa0663b882aa133094fe64ad6296ed8cb1c47");
+            myHeaders.append("authorisation", "bjDw4NtKucrnQheVzP6aYAygEvfR28dB");
+            myHeaders.append("Cookie", "ci_session=ff2aa0663b882aa133094fe64ad6296ed8cb1c47");
+            var reply = null
 
-          var requestOptions = {
-              method: 'POST',
-              headers: myHeaders,
-              redirect: 'follow'
-          };
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                redirect: 'follow'
+            };
 
-          fetch("https://ad.simaneka.com/api/get?type=hORIZONTAL Strip", requestOptions)
-              .then(response => response.text())
-              .then(result => 
+            fetch("https://ad.simaneka.com/api/get?type=Vertical Strip", requestOptions)
+                .then(response => response.text())
+                .then(result => {
+                        reply = JSON.parse(result);
+                        document.querySelector('.advertisment').src = reply.link;
+                        document.querySelector('.redirect').href = reply.redirect_link;
+                })
+                .catch(error => console.log('error', error));
+      // var myHeaders = new Headers();
+      //     myHeaders.append("authorisation", "XUwCeuxr6ZjELa4cA9dhYSDV7fpsRMGz");
+      //     myHeaders.append("Cookie", "ci_session=ff2aa0663b882aa133094fe64ad6296ed8cb1c47");
+
+      //     var requestOptions = {
+      //         method: 'POST',
+      //         headers: myHeaders,
+      //         redirect: 'follow'
+      //     };
+
+      //     fetch("https://ad.simaneka.com/api/get?type=hORIZONTAL Strip", requestOptions)
+      //         .then(response => response.text())
+      //         .then(result => 
                       
-                      // console.log(JSON.parse(result).link))
-                      document.querySelector('.adSpace').src = JSON.parse(result).link,
-                      // document.querySelector('.adSpace').src = JSON.parse(result).link
-              )
-              .catch(error => console.log('error', error));
+      //                 // console.log(JSON.parse(result).link))
+      //                 document.querySelector('.adSpace').src = JSON.parse(result).link,
+      //                 // document.querySelector('.adSpace').src = JSON.parse(result).link
+      //         )
+      //         .catch(error => console.log('error', error));
 
   </script>
   </body>

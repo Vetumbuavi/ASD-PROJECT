@@ -11,13 +11,13 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Web Design Mastery | Pathway</title>
     <style>
-      .redirect
+      .redirect2
       {
           height: 100px;
           width: 100%;
           background-color: blue;
-          padding-left: 10px;
-          padding-right: 10px;
+          /* padding-left: 10px;
+          padding-right: 10px; */
          
       }
       .wrapper2
@@ -69,13 +69,18 @@
         </div>
       </div>
       <!-- AD SERVER -->
-      <div class="redirect">
-        <img class="adSpace" width="100%" src="" alt="">
+      <div class="redirect2">
+        <!-- <img class="adSpace" width="100%" src="" alt=""> -->
+        <a class="redirect" href="https://google.com">
+          <img class="advertisment" width="100%" src="https://i.pinimg.com/originals/fd/2e/16/fd2e16de809e4727308251edf81a2831.png">
+        </a>
       </div>
-      <a class="redirect" href="https://google.com">
+      <!-- <a class="redirect" href="https://google.com">
         <img class="advertisment" src="https://i.pinimg.com/originals/fd/2e/16/fd2e16de809e4727308251edf81a2831.png">
-    </a>
+      </a> -->
     </header>
+    <br>
+    <br>
 
     <section class="section__container destination__container">
       <div class="section__header">
@@ -167,7 +172,7 @@
                 redirect: 'follow'
             };
 
-            fetch("https://ad.simaneka.com/api/get?type=Vertical Strip", requestOptions)
+            fetch("https://ad.simaneka.com/api/get?type=Horizontal Strip", requestOptions)
                 .then(response => response.text())
                 .then(result => {
                         reply = JSON.parse(result);
